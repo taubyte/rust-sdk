@@ -1,0 +1,15 @@
+[package]
+name = "taubyte-sdk"
+version = "0.1.2"
+description = "Taubyte rust SDK to use within the Taubyte VM"
+edition = "2021"
+license = "MIT"
+
+[lib]
+crate-type = ["lib"]
+crate-name = "taubyte-sdk"
+
+[dependencies]
+bytes = "1.3.0"
+http = "0.2"
+cid = "0.7.0"

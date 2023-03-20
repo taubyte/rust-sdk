@@ -5,6 +5,15 @@ description = "Taubyte rust SDK to use within the Taubyte VM"
 edition = "2021"
 license = "MIT"
 
+homepage = "https://taubyte.com"
+repository = "https://github.com/taubyte/rust-sdk"
+keywords = ["webassembly", "wasm", "web3", "serverless"]
+
+categories = ["wasm", "no-std"]
+
+authors = ["Taubyte"]
+
+
 [lib]
 crate-type = ["lib"]
 crate-name = "taubyte-sdk"

@@ -1,5 +1,5 @@
 pub mod codec {
-    pub mod byte_slice;
+    pub mod bytes_slice;
     pub mod cid;
     pub mod string_slice;
 }

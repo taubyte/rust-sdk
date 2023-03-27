@@ -37,7 +37,7 @@ pub fn write_bytes_vec(ptr: *mut u8, to_write: Vec<u8>) {
 
 pub fn write_string_slice(ptr: *mut u8, to_write: &[&str]) {
     let v: Vec<String> = to_write.iter().map(|s| s.to_string()).collect();
-    let bytes_slice = codec::byte_slice::from_string_slice(v);
+    let bytes_slice = codec::string_slice::from(v);
 
     unsafe {
         let buf = std::slice::from_raw_parts_mut(ptr, bytes_slice.len());
@@ -47,7 +47,7 @@ pub fn write_string_slice(ptr: *mut u8, to_write: &[&str]) {
 
 pub fn write_string_slice_size(ptr: *mut usize, to_write: &[&str]) {
     let v: Vec<String> = to_write.iter().map(|s| s.to_string()).collect();
-    let bytes_slice = codec::byte_slice::from_string_slice(v);
+    let bytes_slice = codec::string_slice::from(v);
     write_usize(ptr, bytes_slice.len())
 }
 

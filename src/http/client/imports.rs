@@ -233,7 +233,7 @@ pub fn getHttpResponseHeaderSize(
     assert_eq!(key, test::HEADER_KEY);
 
     let v = vec![test::HEADER_VALUE.to_string()];
-    let header = codec::byte_slice::from_string_slice(v);
+    let header = codec::string_slice::from(v);
     utils::write_usize(size, header.len());
 
     Errno::ErrorNone.error()
@@ -260,7 +260,7 @@ pub fn getHttpResponseHeader(
     assert_eq!(key, test::HEADER_KEY);
 
     let v = vec![test::HEADER_VALUE.to_string()];
-    let header = codec::byte_slice::from_string_slice(v);
+    let header = codec::string_slice::from(v);
     utils::write_bytes_vec(buf_ptr, header);
 
     Errno::ErrorNone.error()

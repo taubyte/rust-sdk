@@ -96,7 +96,7 @@ pub mod mock {
         let name = utils::read_string(name_ptr, name_size);
 
         let to_write_versions: Vec<String> = test::VERSIONS.iter().map(|v| v.to_string()).collect();
-        let to_write = codec::byte_slice::from_string_slice(to_write_versions);
+        let to_write = codec::string_slice::from(to_write_versions);
 
         if storage_id != new_test::STORAGE_ID {
             Errno::ErrorCap.error()
@@ -117,7 +117,7 @@ pub mod mock {
         let name = utils::read_string(name_ptr, name_size);
 
         let to_write_versions: Vec<String> = test::VERSIONS.iter().map(|v| v.to_string()).collect();
-        let to_write = codec::byte_slice::from_string_slice(to_write_versions);
+        let to_write = codec::string_slice::from(to_write_versions);
 
         if storage_id != new_test::STORAGE_ID {
             Errno::ErrorCap.error()

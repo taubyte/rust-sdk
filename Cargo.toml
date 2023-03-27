@@ -1,6 +1,6 @@
 [package]
 name = "taubyte-sdk"
-version = "0.1.2"
+version = "0.1.6"
 description = "Taubyte rust SDK to use within the Taubyte VM"
 edition = "2021"
 license = "MIT"
